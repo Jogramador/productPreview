@@ -1,0 +1,25 @@
+:root {
+  very-dark-blue: hsl(212, 21%, 14%);
+  darkgrayish-blue: hsl(228, 12%, 48%);
+  white: hsl(0, 0%, 100%);
+  dark-cyan: hsl(158, 36%, 37%);
+  cream: hsl(30, 38%, 92%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+}
+
+.image {
+}
+.content {
+}
+.button {
+  background-color: var(Dark-cyan);
+  color: var(White);
+}

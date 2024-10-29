@@ -1,25 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
 :root {
-  very-dark-blue: hsl(212, 21%, 14%);
-  darkgrayish-blue: hsl(228, 12%, 48%);
-  white: hsl(0, 0%, 100%);
-  dark-cyan: hsl(158, 36%, 37%);
-  cream: hsl(30, 38%, 92%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --darkgrayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: #f2ebe3;
 }
 
-* {
-  padding: 0;
-  margin: 0;
+/*------------------RESET CSS*/
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-.container {
+/* 2. Remove default margin */
+* {
+  margin: 0;
 }
 
-.image {
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
 }
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*------------------RESET CSS*/
+
+/* ----------------------------general---------------- */
+body {
+  font-family: "Montserrat";
+  background-color: var(--cream);
+  margin: 1rem;
+  display: grid;
+  min-height: 100vh;
+  place-content: center;
+}
+
+/* @media screen and (min-width: 600px) {
+  .container {
+    display: flex;
+    max-width: 37.5rem;
+    max-height: 28.125rem;
+  }
+} */
+
+.container {
+  background-color: var(--white);
+  border-radius: 0.625rem;
+  overflow: hidden;
+}
+
 .content {
+  display: grid;
+  gap: 1rem;
+  padding: 1.5rem;
+  /* background-color: var(--white); */
 }
-.button {
-  background-color: var(Dark-cyan);
-  color: var(White);
+
+.content h1 {
+  font-family: "Fraunces", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings: "SOFT" 0, "WONK" 0;
+  font-size: 2rem;
+}
+
+.price {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.price_text_green {
+  color: var(--dark-cyan);
+  font-family: "Fraunces", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings: "SOFT" 0, "WONK" 0;
+  font-size: 2rem;
 }

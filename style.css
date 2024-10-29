@@ -6,6 +6,8 @@
   --darkgrayish-blue: hsl(228, 12%, 48%);
   --white: hsl(0, 0%, 100%);
   --dark-cyan: hsl(158, 36%, 37%);
+  --dark-cyan-dark: hsl(158, 36%, 20%);
+
   --cream: #f2ebe3;
 }
 
@@ -76,6 +78,7 @@ h6 {
 /* ----------------------------general---------------- */
 body {
   font-family: "Montserrat";
+  color: var(--darkgrayish-blue);
   background-color: var(--cream);
   margin: 1rem;
   display: grid;
@@ -106,6 +109,7 @@ body {
 
 .content h1 {
   font-family: "Fraunces", serif;
+  color: var(--very-dark-blue);
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
@@ -118,6 +122,9 @@ body {
   gap: 1rem;
   align-items: center;
 }
+.price_original {
+  text-decoration: line-through;
+}
 
 .price_text_green {
   color: var(--dark-cyan);
@@ -127,4 +134,30 @@ body {
   font-style: normal;
   font-variation-settings: "SOFT" 0, "WONK" 0;
   font-size: 2rem;
+}
+
+.button {
+  cursor: pointer;
+  text-decoration: none;
+  border: 0;
+  background-color: var(--dark-cyan);
+  padding: 1.125rem 5.625rem;
+  color: var(--white);
+  display: inline-flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.925rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+}
+.button[data-icon="shopping-cart"]::before {
+  content: "";
+  background-image: url("images/icon-cart.svg");
+  width: 15px;
+  height: 16px;
+}
+
+.button:is(:hover, :focus) {
+  background-color: var(--dark-cyan-dark);
 }
